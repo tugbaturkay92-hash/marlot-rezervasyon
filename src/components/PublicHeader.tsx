@@ -40,12 +40,12 @@ export default function PublicHeader() {
           {/* Concierge & CTA */}
           <div className="hidden md:flex items-center gap-5">
             <a
-              href="tel:+902122874000"
+              href="tel:+905521193095"
               className="flex flex-col text-right pr-2 hover:opacity-80 transition-opacity"
             >
-              <span className="text-[10px] text-[#C5A059] uppercase tracking-wider font-semibold">Konsiyerj</span>
+              <span className="text-[10px] text-[#C5A059] uppercase tracking-wider font-semibold">Rezervasyon & Bilgi</span>
               <span className="text-xs text-[#F8EEEF] font-medium flex items-center gap-1">
-                <Phone size={11} className="text-[#C5A059]" /> +90 212 287 40 00
+                <Phone size={11} className="text-[#C5A059]" /> +90 552 119 30 95
               </span>
             </a>
 
@@ -89,8 +89,8 @@ export default function PublicHeader() {
             </button>
             <Link href="/rezervasyon" onClick={() => setMenuOpen(false)} className="hover:text-white">Masa Rezervasyonu</Link>
             <div className="pt-4 border-t border-white/10 flex flex-col gap-1 text-xs">
-              <span className="text-[#C5A059]">Konsiyerj Hattı</span>
-              <a href="tel:+902122874000" className="text-white font-medium">+90 212 287 40 00</a>
+              <span className="text-[#C5A059]">Rezervasyon & Bilgi Hattı</span>
+              <a href="tel:+905521193095" className="text-white font-medium">+90 552 119 30 95</a>
             </div>
           </div>
         )}

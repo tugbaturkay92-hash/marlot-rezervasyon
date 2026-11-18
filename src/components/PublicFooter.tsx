@@ -55,8 +55,8 @@ export default function PublicFooter() {
             </div>
             <div className="flex gap-2.5 items-center">
               <Phone size={16} className="text-[#C5A059] shrink-0" />
-              <a href="tel:+902122874000" className="hover:text-white transition-colors">
-                +90 212 287 40 00
+              <a href="tel:+905521193095" className="hover:text-white transition-colors">
+                +90 552 119 30 95
               </a>
             </div>
             <div className="flex gap-2.5 items-center">

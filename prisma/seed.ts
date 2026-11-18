@@ -22,7 +22,7 @@ async function main() {
       where: { id: restaurant.id },
       data: {
         name: 'Marlot Restorant',
-        phone: '+902122874000',
+        phone: '+905521193095',
         address: 'Kuruçeşme Yalı Hattı No: 84, Beşiktaş / İstanbul',
         description: '19. yüzyıl Boğaz yalı mimarisinde, çağdaş haute gastronomie lezzet ritüelleri, küratörlü tarihi şarap mahzeni ve büyüleyici Boğaz manzarası.',
         primaryColor: '#3D0011',
