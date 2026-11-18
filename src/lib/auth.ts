@@ -11,8 +11,8 @@ export interface SessionData {
 export const sessionOptions = {
   password: (process.env.SESSION_SECRET && process.env.SESSION_SECRET.length >= 32)
     ? process.env.SESSION_SECRET
-    : 'lokanta-qr-menu-gizli-oturum-anahtari-2026-super-secret-key',
-  cookieName: 'lokanta-session',
+    : 'marlot-restorant-kurucesme-bordeaux-opulence-secret-key-2026',
+  cookieName: 'marlot-session',
   cookieOptions: {
     secure: process.env.NODE_ENV === 'production',
     httpOnly: true,

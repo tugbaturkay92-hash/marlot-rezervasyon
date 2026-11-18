@@ -26,7 +26,8 @@ export default function GirisPage() {
         setError(data.error || 'Giriş başarısız');
         return;
       }
-      router.push('/admin');
+      // Hard redirect to propagate session cookie reliably
+      window.location.href = '/admin';
     } catch {
       setError('Bağlantı hatası');
     } finally {
