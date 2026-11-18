@@ -10,12 +10,14 @@ export function generateTimeSlots(
   const [openH, openM] = openingTime.split(':').map(Number);
   const [closeH, closeM] = closingTime.split(':').map(Number);
 
-  const baseDate = parseISO(date);
-  let current = new Date(baseDate);
-  current.setHours(openH, openM, 0, 0);
+  const [year, month, day] = date.split('-').map(Number);
+  let current = new Date(year, month - 1, day, openH, openM, 0, 0);
 
-  const closing = new Date(baseDate);
-  closing.setHours(closeH, closeM, 0, 0);
+  const closing = new Date(year, month - 1, day, closeH, closeM, 0, 0);
+  if (closeH <= openH) {
+    closing.setDate(closing.getDate() + 1);
+  }
+
   // Son slot: kapanış saatinden slotDuration kadar önce başlamalı
   const lastSlotStart = addMinutes(closing, -slotDuration);
 

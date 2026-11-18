@@ -59,9 +59,13 @@ export default function ReservasyonPage() {
     setStep(2);
     setSlotsLoading(true);
     try {
-      const res = await fetch(`/api/reservations/available-slots?date=${dateStr}&guests=${guestCount}`);
+      const res = await fetch(`/api/reservations/available-slots?date=${dateStr}&guests=${guestCount}`, {
+        cache: 'no-store',
+      });
       const data = await res.json();
-      setSlots(data);
+      setSlots(Array.isArray(data) ? data : []);
+    } catch {
+      setSlots([]);
     } finally {
       setSlotsLoading(false);
     }
@@ -108,7 +112,7 @@ export default function ReservasyonPage() {
         `/rezervasyon/basarili?code=${data.confirmationCode}&date=${selectedDate}&time=${selectedTime}&guests=${guestCount}&name=${encodeURIComponent(form.customerName)}`
       );
     } catch {
-      setError('Rezervasyon oluşturulamadı. Lütfen konsiyerj hattımız ile iletişime geçiniz: +90 212 287 40 00');
+      setError('Rezervasyon oluşturulamadı. Lütfen konsiyerj hattımız ile iletişime geçiniz: +90 552 119 30 95');
     } finally {
       setSubmitting(false);
     }
